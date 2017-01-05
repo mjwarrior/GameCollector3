@@ -93,6 +93,7 @@
                                 </state>
                                 <connections>
                                     <action selector="addTapped:" destination="DQ3-gJ-saN" eventType="touchUpInside" id="b72-3E-TmI"/>
+                                    <action selector="deleteTapped:" destination="DQ3-gJ-saN" eventType="touchUpInside" id="xUC-wq-THF"/>
                                 </connections>
                             </button>
                         </subviews>
