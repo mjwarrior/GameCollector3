@@ -40,7 +40,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ISl-H9-osR">
                             <color key="tintColor" red="0.023904791101813316" green="0.0053633810020983219" blue="0.0045980233699083328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="DQ3-gJ-saN" kind="show" id="UKb-28-nwk"/>
+                                <segue destination="DQ3-gJ-saN" kind="show" identifier="gameSegue" id="UKb-28-nwk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -86,6 +86,15 @@
                                     <action selector="addTapped:" destination="DQ3-gJ-saN" eventType="touchUpInside" id="7xh-f4-cRD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jar-3X-ONu">
+                                <rect key="frame" x="138" y="333" width="45" height="30"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" red="0.033451162280000002" green="0.076579771939999999" blue="0.023882120850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addTapped:" destination="DQ3-gJ-saN" eventType="touchUpInside" id="b72-3E-TmI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -94,8 +103,10 @@
                             <constraint firstItem="yMk-IZ-ELr" firstAttribute="top" secondItem="lGw-Yw-6dp" secondAttribute="bottom" constant="20" id="TdH-lA-lCQ"/>
                             <constraint firstItem="yMk-IZ-ELr" firstAttribute="centerX" secondItem="NzC-57-g45" secondAttribute="centerX" id="Uyq-kf-jQG"/>
                             <constraint firstItem="wtp-Ay-DSx" firstAttribute="width" secondItem="yMk-IZ-ELr" secondAttribute="width" id="ZND-uh-mx4"/>
+                            <constraint firstItem="jar-3X-ONu" firstAttribute="top" secondItem="9At-HZ-a9g" secondAttribute="bottom" constant="16" id="m4e-YR-XUW"/>
                             <constraint firstItem="wtp-Ay-DSx" firstAttribute="centerX" secondItem="NzC-57-g45" secondAttribute="centerX" id="qCF-d9-Tbr"/>
                             <constraint firstItem="wtp-Ay-DSx" firstAttribute="top" secondItem="yMk-IZ-ELr" secondAttribute="bottom" constant="43" id="tDU-Ii-9ly"/>
+                            <constraint firstItem="jar-3X-ONu" firstAttribute="centerX" secondItem="NzC-57-g45" secondAttribute="centerX" id="xJB-Yh-WdT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="h7k-wO-DRZ">
@@ -115,6 +126,8 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addupdatebutton" destination="9At-HZ-a9g" id="srK-gW-LUl"/>
+                        <outlet property="deleteButton" destination="jar-3X-ONu" id="r8l-fn-as6"/>
                         <outlet property="gameImageView" destination="yMk-IZ-ELr" id="EC3-vM-jTs"/>
                         <outlet property="titleTextField" destination="wtp-Ay-DSx" id="3Jv-Ne-ZT0"/>
                     </connections>
