@@ -59,7 +59,13 @@ class GameViewController: UIViewController,UIImagePickerControllerDelegate,UINav
     }
     
     @IBAction func cameraTapped(_ sender: Any) {
-    }  
+       
+        imagePicker.sourceType = .camera
+        
+        present(imagePicker, animated: true, completion: nil)
+        
+
+    }
 
     @IBAction func addTapped(_ sender: Any) {
     
@@ -94,7 +100,7 @@ class GameViewController: UIViewController,UIImagePickerControllerDelegate,UINav
         
         navigationController!.popViewController(animated: true)
         
-
+        
     
     }
 
